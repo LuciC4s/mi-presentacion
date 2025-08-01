@@ -1,0 +1,119 @@
+/* 1. Variables de color */
+:root {
+  /* Neutrales */
+  --color-bg:        #ffffff;
+  --color-text:      #121212;
+
+  /* Acentos */
+  --color-primary:   #006bb3;  /* azul */
+  --color-secondary: #00c4cc;  /* aqua */
+  --color-accent:    #9c27b0;  /* morado */
+  --color-success:   #2e7d32;  /* verde */
+
+  /* Sombras */
+  --shadow-light: 0 2px 5px rgba(0,0,0,0.1);
+  --shadow-heavy: 0 4px 15px rgba(0, 0, 0, 0.637);
+}
+
+/* 2. Reset y cuerpo */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* 3. Header */
+header {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  padding: 32px 16px;
+  text-align: center;
+}
+header .row {
+  align-items: center;
+  /* padding: 32px 0; */
+}
+header #foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-light);
+  transition: box-shadow .3s ease;
+  display: block;
+  margin: 0 auto;
+}
+header #foto:hover {
+  box-shadow: var(--shadow-heavy);
+}
+header #name {
+  color: var(--color-bg);
+  font-size: 32px;
+}
+header #slogan {
+  color: var(--color-secondary);
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+/* 4. Sección “Sobre mí” */
+section:nth-of-type(1) {
+  padding: 32px 16px;
+}
+section:nth-of-type(1) h3 {
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+section:nth-of-type(1) p {
+  margin-bottom: 16px;
+}
+
+/* 5. Pasatiempos (tarjetas) */
+section:nth-of-type(2) h3 {
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+.card-group {
+  gap: 16px;
+  margin: 32px 0;
+}
+.card {
+  border: 1px solid var(--color-accent);
+  box-shadow: var(--shadow-light);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-heavy);
+}
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+.card-title {
+  color: var(--color-primary);
+}
+
+/* 6. Pie de página */
+footer {
+  background: var(--color-text);
+  color: var(--color-bg);
+  text-align: center;
+  padding: 24px 16px;
+  margin-top: 48px;
+}
+footer a {
+  color: var(--color-secondary);
+  margin: 0 8px;
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
